@@ -1,0 +1,79 @@
+.navbar{
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-bottom:1px solid var(--gray)
+}
+.navbar-icon{
+   width: 150px;
+ 
+}
+.navbar-icon-container{
+    color:white;
+    font-size:30px;
+    padding-left:100px;
+    font-weight: 600;
+    cursor:pointer
+}
+.left-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center
+    
+}
+.nav-list>ul{
+    list-style-type:none;
+
+}
+.nav-list>ul>li{
+    display:inline;
+    color:white;
+    padding:10px;
+    font-weight: 500;
+    cursor:pointer;
+    font-family: custom-font, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+}
+.right-nav{
+    display:flex;
+    flex-direction: row;
+    padding:30px;
+    justify-content: space-between;
+    color:white;
+    font-weight: 500;
+    font-family: custom-font, BlinkMacSystemFont, -apple-system,
+}
+.right-nav>div{
+    padding:5px
+}
+.toggler-content{
+    padding:20px 30px;
+}
+.nav-items-list>ul{
+    list-style-type:none;
+    padding:10px
+}
+.nav-items-list>ul>li{
+    padding:10px;
+    font-size:17px;
+    color:white;
+    border: 2px solid var(--green);
+    background-color:var(--green);
+    border-radius: 50px;
+    text-align: center;
+    margin:20px
+}
+.float-icon-nav{
+  width:35px;
+  height:35px;
+  background-color:var(--black1);
+    text-align:center;
+    padding-top: 0px;
+  border-radius: 50px;  
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  position:fixed;
+  right:5px;
+  top:50vh
+}
