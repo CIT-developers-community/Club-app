@@ -1,6 +1,9 @@
 
-body{
-    background:linear-gradient(to right, var(--black)0%, var(--black)50%, var(--green)50%, var(--green) 100%);
+.signup-bg{
+    background:linear-gradient(to left   , var(--black)0%, var(--black)50%, var(--green)50%, var(--green) 100%);
+    height:vh;
+    position:relative;
+    padding:60px
 }
 .signup-container{
     background-color: white;
@@ -9,7 +12,7 @@ body{
     margin:10px auto;
     padding:40px;
     border-radius: 40px;
-    margin-top: 90px;
+    margin-top: px;
     min-height: 500px;
 }
 .text-large{
@@ -56,18 +59,18 @@ body{
     justify-content:space-between;
     align-items:center;
 }
-label{
+.label{
     font-weight: 400;
     font-size:13px;
     color:rgb(145, 145, 145);
     
 }
-input{
+.input{
     border-radius: 5px;
     width: 150px;
     height:40px;
     border: 2px solid rgb(148, 148, 148);
-    font-weight: 500;
+    font-weight: 540;
     padding: 5px;
 }
 form{
@@ -76,7 +79,7 @@ form{
 .form-item{
     margin:  10px 10px;
 }
-input:focus{
+.input:focus{
     border:2px solid var(--green);
     outline:none;
 }
@@ -87,13 +90,16 @@ input:focus{
     display: none;
 }
 @media only screen and (max-width: 720px) {
+    .signup-bg{
+        padding: 0px
+    }
     body {
       background: linear-gradient(to top , var(--black)0%, var(--black)50%, var(--green)50%, var(--green) 100%);
     }
     .svg-content{
         display: none
     }
-    input{
+    .input{
         width:240px;
     }
     .pass{
@@ -107,7 +113,7 @@ input:focus{
         padding:20px;
         margin-top:100px;
         border-radius: 5px;
-        margin-bottom:30px;
+        margin-bottom:100px;
     }   
     .flex-4{
         flex-direction: column;
