@@ -11,6 +11,12 @@ function LoginPage() {
     const [mail,setMail]=useState("")
     const [password,setPassword]=useState("")
     const dispatch=useDispatch()
+    useEffect(()=>{
+        document.body.style.background="#1F1F1F";
+        return()=>{
+            document.body.style.background="none"
+        }
+    })
     return (
         <div className="Login-container">
             <div className="container1">
