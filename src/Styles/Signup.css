@@ -93,7 +93,9 @@ form{
     .signup-bg{
         padding: 0px
     }
-
+    body {
+      background: linear-gradient(to top , var(--black)0%, var(--black)50%, var(--green)50%, var(--green) 100%);
+    }
     .svg-content{
         display: none
     }
