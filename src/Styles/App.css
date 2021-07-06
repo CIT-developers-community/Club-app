@@ -28,3 +28,17 @@
     background-color:var(--green);
     color:white
 }
+.green-text{
+    color:var(--green);
+}
+.large-text{
+    font-size:36px;
+    font-family:'Rosario', sans-serif;
+}
+.white-text{
+    color:white;
+}
+.link{
+    text-decoration: none;
+    color:var(--green);
+}
