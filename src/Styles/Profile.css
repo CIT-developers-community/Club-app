@@ -11,16 +11,18 @@
   
   .main {
     flex-grow: 3;
-    height:100vh;
+    height:85vh;
     background-color: var(--green);
     display: flex;
     flex-direction: column;
+    width:75vw;
+    margin-left:275px;
+    margin-top:60px;
+    align-items: center;
+    justify-content: flex-start;
+    padding:15px;
   }
   
-  .main{    
-
-        padding: 15px;
-  }
   .sidebar {
     background-color: var(--black);
     color: var(--black1);
@@ -66,8 +68,7 @@
 }
 .list-it>ul>li:hover{
   color:white;
-  font-size:22px;
-  background-color:var(--black1);
+  background-color:var(--green);
   cursor: pointer;
   padding:10px;
   margin:10px;
@@ -81,4 +82,27 @@
   width:25px;
   height:20px;
   padding:5px
+}
+@media only screen and (max-width: 720px) {
+  .sidebar {
+    top:50px;
+    display:none
+  }
+  .wrapper{
+    display: block;
+  }
+  .main {
+      height:auto;
+    background-color: var(--green);
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    margin-left:0px;
+    margin-top:60px;
+    align-items: center;
+    justify-content: flex-start;
+    padding:15px;
+  }
+
+
 }

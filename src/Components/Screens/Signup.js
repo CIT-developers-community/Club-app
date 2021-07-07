@@ -4,14 +4,45 @@ import '../../Styles/index.css'
 import svg from '../../assets/signup.svg'
 import Tilt from 'react-parallax-tilt';
 import {Link,useHistory} from 'react-router-dom'
-function Signup() {
+import { connect } from 'react-redux'
+import { signUp } from "../../Actions/Actions"
+function Signup(props) {
     const history=useHistory()
     const [name, setName] = useState("")
     const [mail, setMail] = useState("")
     const [mobile, setMobile] = useState()
     const [password, setPassword] = useState("")
+    const check=(e)=>{
+        e.preventDefault()
+        let valid  = "@cit.edu.in"
+        let mail_input = mail.slice(-11)
 
+        let valid_password = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
+
+        if (name==="" || mail==="" || password ===""||mobile ===""){
+            alert('Fill all fields')
+        }
+        
+        if(mail_input === valid && mobile.length === 10 && valid_password.test(password)){
+            let details = {
+                name:name,
+                email:mail,
+                password:password,
+                number:mobile
+            }
+
+            props.signUp(details)
+        }
+        else{
+            alert('Details are not valid')
+        }
+        console.log(mail)
+        console.log(props.auth.uid)
+    
+    }
+    
     return (
+        
         <div className="signup-bg">
         <div className="signup-container">
             <div className="signup-flex">
@@ -47,7 +78,7 @@ function Signup() {
                                 <input name="first-name" className="input pass" type="Password"  spellCheck='false' value={password} onChange={(e) => setPassword(e.target.value)} />
                             </div>
                             <div className="sigup-button">
-                                <button className="green-solid-button form-item" style={{ margin: "20px" }}>Sign up</button>
+                                <button className="green-solid-button form-item" onClick = {(e)=>check(e)} style={{ margin: "20px" }}>Sign up</button>
                             </div>
                         </form>
                     </div>
@@ -77,5 +108,18 @@ function Signup() {
         </div>
     )
 }
+const mapStateToProps = (state) => {
+    return {
+      auth: state.firebase.auth
+    }
+  }
+  
+  const mapDispatchToProps = (dispatch)=> {
+    return {
+      signUp: (details) => dispatch(signUp(details))
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Signup)
 
-export default Signup
+
